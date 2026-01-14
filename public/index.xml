@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>David Robert - Data Scientist / ML Engineer</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on David Robert - Data Scientist / ML Engineer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 15 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Power of RAG in Modern LLMs</title>
+      <link>http://localhost:1313/blog/second-post/</link>
+      <pubDate>Mon, 15 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/second-post/</guid>
+      <description>Retrieval-Augmented Generation (RAG) is a powerful technique that combines the generative power of Large Language Models (LLMs) with the factual grounding of an external knowledge base. This approach helps to reduce hallucinations and provide more accurate, up-to-date responses. In this post, we&amp;rsquo;ll explore the basic architecture of a RAG system.</description>
+    </item>
+    <item>
+      <title>Welcome to My Blog</title>
+      <link>http://localhost:1313/blog/first-post/</link>
+      <pubDate>Wed, 10 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/first-post/</guid>
+      <description>This is the first post on my new blog. I&amp;rsquo;ll be writing about topics in AI, Machine Learning, and software development. Stay tuned!</description>
+    </item>
+    <item>
+      <title>Rustyroboz.com - VR Experiments</title>
+      <link>http://localhost:1313/projects/rustyroboz/</link>
+      <pubDate>Sun, 01 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/rustyroboz/</guid>
+      <description>This project is a playground for exploring virtual reality experiences and integrating intelligent agents using Unity 3D. It serves as a practical application of AI concepts in an interactive environment.</description>
+    </item>
+    <item>
+      <title>AI-Powered Customer Support Chatbot</title>
+      <link>http://localhost:1313/projects/chatbot-rag/</link>
+      <pubDate>Sun, 15 May 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/chatbot-rag/</guid>
+      <description>Developed a proof-of-concept chatbot that leverages a Retrieval-Augmented Generation (RAG) system to provide accurate answers to customer questions based on a private knowledge base. The backend is served via a FastAPI container.</description>
+    </item>
+    <item>
+      <title>Real-Time Object Detection in Video Streams</title>
+      <link>http://localhost:1313/projects/object-detection/</link>
+      <pubDate>Sat, 20 Nov 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/object-detection/</guid>
+      <description>This project focused on building and optimizing a real-time object detection pipeline using YOLOv5. The system processes video streams and identifies a predefined set of objects with high accuracy and low latency, suitable for applications in security or automated monitoring.</description>
+    </item>
+  </channel>
+</rss>

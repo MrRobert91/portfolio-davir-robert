@@ -1,0 +1,121 @@
+{{ define "main" }}
+
+{{/* Hero Section */}}
+<section class="hero-section text-center">
+    <div class="container">
+        <h1>{{ .Site.Params.name }}</h1>
+        <h2>{{ .Site.Params.role }}</h2>
+        <p class="tagline">{{ .Site.Params.hero.tagline }}</p>
+        <div class="hero-cta">
+            <a href="#contact" class="btn btn-primary">Contact</a>
+            <a href="{{ "/projects/" | relURL }}" class="btn">Projects</a>
+            <a href="/cv.pdf" class="btn" target="_blank">Download CV</a>
+        </div>
+    </div>
+</section>
+
+{{/* About Section */}}
+<section id="about" class="section">
+    <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <p>{{ .Site.Params.hero.summary }}</p>
+    </div>
+</section>
+
+{{/* Skills Section */}}
+<section id="skills" class="section bg-light">
+    <div class="container">
+        <h2 class="section-title">Skills</h2>
+        <div class="skills-grid">
+            {{ range .Site.Data.cv.skills }}
+            <div class="skill-category">
+                <h3>{{ .category }}</h3>
+                <ul>
+                    {{ range .items }}
+                    <li>{{ . }}</li>
+                    {{ end }}
+                </ul>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>
+
+{{/* Experience Section */}}
+<section id="experience" class="section">
+    <div class="container">
+        <h2 class="section-title">Experience</h2>
+        <div class="timeline">
+            {{ range .Site.Data.cv.experience }}
+            <div class="timeline-item">
+                <h3>{{ .job }} at {{ .company }}</h3>
+                <p class="timeline-period">{{ .period }}</p>
+                <ul>
+                    {{ range .details }}
+                    <li>{{ . }}</li>
+                    {{ end }}
+                </ul>
+                {{ if .tech }}
+                <div class="tech-tags">
+                    {{ range .tech }}
+                    <span class="tag">{{ . }}</span>
+                    {{ end }}
+                </div>
+                {{ end }}
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>
+
+{{/* Projects Section - A teaser */}}
+<section id="projects" class="section bg-light">
+    <div class="container text-center">
+        <h2 class="section-title">Recent Projects</h2>
+        <p>Here are a few projects I've worked on. See all of them for more details.</p>
+        <a href="{{ "/projects/" | relURL }}" class="btn btn-primary">View All Projects</a>
+    </div>
+</section>
+
+
+{{/* Education Section */}}
+<section id="education" class="section">
+    <div class="container">
+        <h2 class="section-title">Education & Certifications</h2>
+        {{ range .Site.Data.cv.education }}
+        <div class="education-item">
+            <h3>{{ .degree }}</h3>
+            <p>{{ .institution }}</p>
+        </div>
+        {{ end }}
+         {{ range .Site.Data.cv.certifications }}
+        <div class="education-item">
+            <h3>{{ .name }}</h3>
+        </div>
+        {{ end }}
+    </div>
+</section>
+
+{{/* Mentoring Section */}}
+<section id="mentoring" class="section bg-light">
+    <div class="container">
+        <h2 class="section-title">Mentoring & Community</h2>
+         {{ range .Site.Data.cv.mentoring }}
+        <div class="mentoring-item">
+            <h3>{{ .activity }}</h3>
+            <p>{{ .details }}</p>
+        </div>
+        {{ end }}
+    </div>
+</section>
+
+{{/* Contact Section */}}
+<section id="contact" class="section">
+    <div class="container text-center">
+        <h2 class="section-title">Get In Touch</h2>
+        <p>Feel free to reach out for collaborations or just a friendly chat.</p>
+        <a href="mailto:{{ .Site.Params.email }}" class="btn btn-primary">{{ .Site.Params.email }}</a>
+    </div>
+</section>
+
+{{ end }}

@@ -1,0 +1,39 @@
+baseURL = "https://example.org/"
+languageCode = "en-us"
+title = "David Robert - Data Scientist / ML Engineer"
+
+[params]
+    name = "David Robert"
+    role = "Data Scientist / ML Engineer"
+    location = "Spain"
+    email = "davidrobertnunez@gmail.com"
+    phone = "+34 618036138"
+
+    [params.hero]
+        tagline = "Artificial Intelligence engineer specialized in NLP, LLMs, Computer Vision, and applied Deep Learning."
+        summary = "Experienced end-to-end, from PoC to production integration in Big Data and Cloud environments. Interested in AI Agents and LLM optimization."
+
+    [[params.social]]
+        name = "LinkedIn"
+        url = "https://www.linkedin.com/in/david-robert/"
+
+    [[params.social]]
+        name = "Web"
+        url = "https://www.rustyroboz.com"
+
+    [[menu.main]]
+        name = "Home"
+        url = "/"
+        weight = 1
+    [[menu.main]]
+        name = "Projects"
+        url = "/projects/"
+        weight = 2
+    [[menu.main]]
+        name = "Blog"
+        url = "/blog/"
+        weight = 3
+    [[menu.main]]
+        name = "Contact"
+        url = "#contact"
+        weight = 4

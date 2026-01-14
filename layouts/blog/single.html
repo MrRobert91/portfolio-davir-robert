@@ -1,0 +1,23 @@
+{{ define "main" }}
+<div class="container">
+    <article class="single-content">
+        <header>
+            <h1>{{ .Title }}</h1>
+            <p class="post-meta">Published on {{ .Date.Format "January 2, 2006" }}</p>
+        </header>
+        <div class="content">
+            {{ .Content }}
+        </div>
+        {{ with .Params.tags }}
+        <footer>
+            <div class="tags">
+                <strong>Tags:</strong>
+                {{ range . }}
+                <span class="tag">{{ . }}</span>
+                {{ end }}
+            </div>
+        </footer>
+        {{ end }}
+    </article>
+</div>
+{{ end }}

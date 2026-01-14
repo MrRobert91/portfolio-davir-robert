@@ -1,0 +1,29 @@
+{{ define "main" }}
+<div class="container">
+    <article class="single-content">
+        <header>
+            <h1>{{ .Title }}</h1>
+            <p class="post-meta"><strong>Date:</strong> {{ .Date.Format "January 2, 2006" }}</p>
+        </header>
+        <div class="content">
+            {{ .Content }}
+        </div>
+        <footer>
+            {{ with .Params.tech }}
+            <div class="tech-tags">
+                <strong>Technologies:</strong>
+                {{ range . }}
+                <span class="tag">{{ . }}</span>
+                {{ end }}
+            </div>
+            {{ end }}
+            {{ with .Params.links }}
+            <div class="project-links">
+                {{ with .demo }}<a href="{{ . }}" class="btn" target="_blank" rel="noopener noreferrer">View Demo</a>{{ end }}
+                {{ with .github }}<a href="{{ . }}" class="btn" target="_blank" rel="noopener noreferrer">View on GitHub</a>{{ end }}
+            </div>
+            {{ end }}
+        </footer>
+    </article>
+</div>
+{{ end }}
