@@ -2,7 +2,7 @@
 FROM klakegg/hugo:ext-alpine AS builder
 WORKDIR /src
 COPY . .
-RUN hugo --minify
+RUN hugo --minify --baseURL "/"
 
 # Serve stage
 FROM nginx:alpine
