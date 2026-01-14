@@ -1,0 +1,54 @@
+experience:
+  - job: AI Instructor
+    company: Factoría F5
+    period: 10/2022 – Present
+    details:
+      - Training in NLP, LLMs, Computer Vision, applied Deep Learning
+      - Projects with YOLO, LangChain, CrewAI (RAG systems, AI agents)
+      - "Mentoring: Python, scikit-learn, TensorFlow, PyTorch, FastAPI, Hugging Face, etc."
+  - job: ML Engineer / Data Scientist
+    company: Stratio, Madrid
+    period: 9/2018 – 10/2022
+    details:
+      - AI solutions in R&D, AutoML, advanced analytics
+      - "Prototypes: voice/chatbot assistants + CV models for real-time video analysis"
+      - Designed & implemented integrated AutoML solution enabling training/deployment in Big Data environments
+    tech: ["Python", "Pandas", "Scala", "Spark", "scikit-learn", "TensorFlow", "Keras", "Docker", "Git/GitHub", "Rasa", "OpenCV", "MLflow", "Mesos", "Kubernetes", "Kafka", "PostgreSQL"]
+  - job: Software Developer
+    company: Future Space, Madrid
+    period: 2/2015 – 4/2016
+    details:
+      - Backend for document management apps (DRM) and insurance sector solutions
+      - Web features + online stores integrated with external systems
+    tech: ["Java", "PHP", "MySQL", "JavaScript", "HTML5", "CSS3", "SVN"]
+
+education:
+  - degree: "Bachelor’s Degree in Computer Engineering"
+    institution: Universidad Rey Juan Carlos
+  - degree: "Advanced University Course in Robotics"
+    institution: Universidad Rey Juan Carlos
+
+certifications:
+  - name: "Microsoft Azure AI-102 — Azure AI Engineer Associate"
+
+mentoring:
+  - activity: "Volunteer mentor at AI Saturdays (2 editions)"
+    details: "Reinforcement Learning and Computer Vision modules"
+
+languages:
+  - lang: English
+    level: B2 (TOEIC)
+  - lang: French
+    level: A2
+
+skills:
+  - category: NLP/LLMs
+    items: ["LangChain", "CrewAI", "RAG", "Hugging Face", "Rasa", "TensorFlow", "PyTorch"]
+  - category: Computer Vision
+    items: ["OpenCV", "YOLO", "TensorFlow", "Keras"]
+  - category: MLOps/Deployment
+    items: ["Docker", "Kubernetes", "MLflow", "FastAPI", "Git/GitHub", "Mesos"]
+  - category: Data/Big Data
+    items: ["Python", "Pandas", "scikit-learn", "Spark", "Scala", "Kafka", "PostgreSQL"]
+  - category: Backend
+    items: ["Java", "PHP", "MySQL", "JavaScript", "HTML5", "CSS3"]

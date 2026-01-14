@@ -1,0 +1,12 @@
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-content">
+            <p>&copy; {{ now.Year }} {{ .Site.Params.name }}. All Rights Reserved.</p>
+            <ul class="social-links">
+                {{ range .Site.Params.social }}
+                <li><a href="{{ .url }}" target="_blank" rel="noopener noreferrer">{{ .name }}</a></li>
+                {{ end }}
+            </ul>
+        </div>
+    </div>
+</footer>

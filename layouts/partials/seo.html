@@ -1,0 +1,45 @@
+{{/* SEO and Metadata Partial */}}
+{{ $isHomePage := .IsHome }}
+{{ $pageTitle := .Title }}
+{{ if not $isHomePage }}
+    {{ $pageTitle = printf "%s | %s" .Title .Site.Title }}
+{{ else }}
+    {{ $pageTitle = .Site.Title }}
+{{ end }}
+{{ $description := .Description | default .Site.Params.hero.summary }}
+
+{{/* Basic meta tags */}}
+<meta name="description" content="{{ $description }}">
+
+{{/* Open Graph meta tags */}}
+<meta property="og:title" content="{{ $pageTitle }}">
+<meta property="og:description" content="{{ $description }}">
+<meta property="og:type" content="{{ if $isHomePage }}website{{ else }}article{{ end }}">
+<meta property="og:url" content="{{ .Permalink }}">
+{{/* <meta property="og:image" content="{{ .Site.BaseURL }}images/og-image.jpg"> */}}
+
+{{/* Twitter Card meta tags */}}
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ $pageTitle }}">
+<meta name="twitter:description" content="{{ $description }}">
+{{/* <meta name="twitter:image" content="{{ .Site.BaseURL }}images/twitter-card.jpg"> */}}
+
+{{/* JSON-LD for Person */}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "{{ .Site.Params.name }}",
+  "url": "{{ .Site.BaseURL }}",
+  "jobTitle": "{{ .Site.Params.role }}",
+  "email": "{{ .Site.Params.email }}",
+  "telephone": "{{ .Site.Params.phone }}",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "ES"
+  },
+  "sameAs": [
+    {{ range $index, $element := .Site.Params.social }}{{ if $index }},{{ end }}"{{ .url }}"{{ end }}
+  ]
+}
+</script>
